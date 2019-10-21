@@ -1,0 +1,27 @@
+<h1>{{name}}</h1>
+
+<p>Release Year: {{releaseYear}}</p>
+<p>Genre: {{genre}}</p>
+<p>Director: {{director}}</p>
+<p>
+     {{#if picture}}
+        <img src="{{picture}}" height=250/>
+    {{/if}}
+</p>
+
+<a href="/movie/edit/{{_id}}">
+    <button>
+    Edit Movie
+    </button>
+</a>
+
+
+<form action="/movie/{{_id}}?_method=DELETE" method="POST">
+    <input type="submit" value="Delete Movie"/>
+</form>
+
+<a href="/movie">
+    <button>
+    Back
+    </button>
+</a>

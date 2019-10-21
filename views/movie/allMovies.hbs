@@ -1,0 +1,16 @@
+<h1>All Movies</h1>
+
+<a href="/movie/new">
+    <button>
+        Create New Movie
+    </button>
+</a>
+
+{{#each allMovies}}
+    <a href="/movie/{{_id}}">
+        {{#if picture}}
+            <img src={{picture}} height=250 width="auto"/>
+        {{/if}}
+    <p>{{name}} {{releaseYear}}</p>
+    </a>
+{{/each}}
