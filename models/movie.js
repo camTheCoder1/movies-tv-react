@@ -6,6 +6,7 @@ const MovieSchema = new mongoose.Schema({
  genre: String,
  picture: String,
  directorId: mongoose.ObjectId,
+ trailer: String
 })
 
 const MovieCollection = mongoose.model('Movie', MovieSchema)

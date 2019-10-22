@@ -18,6 +18,10 @@ const methodOverride = require('method-override')
  *
  */
 const { movieRouter } = require('./controllers/movie.js')
+const { tvRouter } = require('./controllers/tv.js')
+const { directorRouter } = require('./controllers/director.js')
+
+
 
 
 /* Step 3
@@ -62,6 +66,9 @@ app.set('view engine', 'hbs')
  * the paths defined in the router.
  */
 app.use('/', movieRouter)
+app.use('/', tvRouter)
+app.use('/', directorRouter)
+
 
 /* Step 5
  *
