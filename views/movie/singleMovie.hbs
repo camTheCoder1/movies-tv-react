@@ -4,8 +4,8 @@
 <p>Genre: {{genre}}</p>
 <p>Director: {{director}}</p>
 <p>
-     {{#if picture}}
-        <img src="{{picture}}" height=250/>
+     {{#if trailer}}
+        <iframe width="875" height="372" src={{trailer}}frameborder="0" allow="accelerometer; autoplay=1; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     {{/if}}
 </p>
 
@@ -15,10 +15,10 @@
     </button>
 </a>
 
-
 <form action="/movie/{{_id}}?_method=DELETE" method="POST">
     <input type="submit" value="Delete Movie"/>
 </form>
+
 
 <a href="/movie">
     <button>

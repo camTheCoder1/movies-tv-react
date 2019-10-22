@@ -1,0 +1,16 @@
+<h1>All TV Shows</h1>
+
+<a href="/tv/new">
+    <button>
+        Create New TV Show
+    </button>
+</a>
+
+{{#each allMovies}}
+    <a href="/tv/{{_id}}">
+        {{#if picture}}
+            <img src={{picture}} height=250 width="auto"/>
+        {{/if}}
+    <p>{{name}} {{releaseYear}}</p>
+    </a>
+{{/each}}

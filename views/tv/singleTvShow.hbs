@@ -1,0 +1,26 @@
+<h1>{{name}}</h1>
+
+<p>Release Year: {{releaseYear}}</p>
+<p>Director: {{director}}</p>
+<p>
+     {{#if picture}}
+        <img src="{{picture}}" height=250/>
+    {{/if}}
+</p>
+
+<a href="/tv/edit/{{_id}}">
+    <button>
+    Edit Tv Show
+    </button>
+</a>
+
+<form action="/tv/{{_id}}?_method=DELETE" method="POST">
+    <input type="submit" value="Delete Tv Show"/>
+</form>
+
+
+<a href="/tv">
+    <button>
+    Back
+    </button>
+</a>

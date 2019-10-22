@@ -6,8 +6,13 @@ const MovieSchema = new mongoose.Schema({
   genre: String,
   director: String,
   picture: String,
-
+  trailer: String
 })
+
+// const TVSchema = new mongoose.Schema({
+//   name: String,
+//   releaseYear: Number
+// })
 
 const MovieCollection = mongoose.model('Movie', MovieSchema)
 
@@ -29,6 +34,10 @@ const getOneMovie = (id) => {
 //create
 const createMovie = (movieData) => {
   return MovieCollection.create(movieData)
+}
+
+const createTrailer = (movieData) => {
+  return MovieCollection.find({movieData})
 }
 
 //update
