@@ -1,0 +1,7 @@
+<h1>Edit Director</h1>
+
+<form action="/director/{{singleDirector._id}}?_method=PUT" method="POST">
+    <input type="text" name="name" placeholder="name" value="{{singleDirector.name}}"/>
+    <input type="number" name="age" placeholder="age" value="{{singleDirector.age}}"/>
+    <input type="submit" value="Save"/>
+</form>

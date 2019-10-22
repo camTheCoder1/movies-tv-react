@@ -1,0 +1,13 @@
+<h1>All Directors</h1>
+
+<a href="/director/new">
+    <button>
+        Create New Director
+    </button>
+</a>
+
+{{#each allDirectors}}
+    <a href="/director/{{_id}}">
+    <p>{{name}}</p>
+    </a>
+{{/each}}
