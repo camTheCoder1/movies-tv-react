@@ -1,60 +1,45 @@
 const mongoose = require('./connection.js')
 
 const MovieSchema = new mongoose.Schema({
-  name: String,
-  releaseYear: Number,
-  genre: String,
-  director: String,
-  picture: String,
-  trailer: String
+ name: String,
+ releaseYear: Number,
+ genre: String,
+ picture: String,
+ directorId: mongoose.ObjectId,
 })
-
-// const TVSchema = new mongoose.Schema({
-//   name: String,
-//   releaseYear: Number
-// })
 
 const MovieCollection = mongoose.model('Movie', MovieSchema)
 
 //getAll
 const getAllMovies = () => {
-  return MovieCollection.find({})
+    return MovieCollection.find({})
 }
-
-//get all Movies By Director Id
-// const getallMoviesByDirectorId = (directorId) => {
-//   return MovieCollection.find({directorId: directorId})
-// }
-
+// get all Movies By Directory Id
+const getAllMoviesByDirectorId = (directorId) => {
+    return MovieCollection.find({directorId: directorId})
+}
 //getOne
 const getOneMovie = (id) => {
-  return MovieCollection.findById(id)
+    return MovieCollection.findById(id)
 }
-
 //create
 const createMovie = (movieData) => {
-  return MovieCollection.create(movieData)
+    return MovieCollection.create(movieData)
 }
-
-const createTrailer = (movieData) => {
-  return MovieCollection.find({movieData})
-}
-
 //update
 const updateMovie = (id, movieData) => {
-  return MovieCollection.updateOne({_id: id}, movieData)
+    return MovieCollection.updateOne({_id: id}, movieData)
 }
-
 //delete
 const deleteMovie = (id) => {
-  return MovieCollection.deleteOne({_id: id})
+    return MovieCollection.deleteOne({_id: id})
 }
 
 module.exports = {
-  getAllMovies,
-  //getallMoviesByDirectorId,
-  getOneMovie,
-  createMovie,
-  updateMovie,
-  deleteMovie
+    getAllMovies,
+    getAllMoviesByDirectorId,
+    getOneMovie,
+    createMovie,
+    updateMovie,
+    deleteMovie
 }
