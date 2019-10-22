@@ -8,9 +8,9 @@ movieRouter.get('/movie/new', (req, res) => {
   res.render('movie/createMovieForm')
 })
 
-// movieRouter.get('/movie/new/:directorId', (req, res) => {
-//   res.render('movie/createMovieForm', {directorId: req.params.directorId})
-// })
+movieRouter.get('/movie/new/:directorId', (req, res) => {
+  res.render('movie/createMovieForm', {directorId: req.params.directorId})
+})
 
 movieRouter.get('/movie/edit/:id', (req, res) => {
   movieApi.getOneMovie(req.params.id)
