@@ -8,14 +8,11 @@ tvRouter.get('/tv/new', (req, res) => {
   res.render('tv/createTvShowForm')
 })
 
-tvRouter.get('/tv/new/:directorId', (req, res) => {
-  res.render('tv/createTvShowForm', {directorId: req.params.directorId})
-})
 
 tvRouter.get('/tv/edit/:id', (req, res) => {
   tvApi.getOneTvShow(req.params.id)
     .then((singleTvShow) => {
-      res.render('tv/editTvForm', singleTvShow)
+      res.render('tv/editTvShowForm', singleTvShow)
     })
 })
 

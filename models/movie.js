@@ -5,7 +5,7 @@ const MovieSchema = new mongoose.Schema({
  releaseYear: Number,
  genre: String,
  picture: String,
- directorId: mongoose.ObjectId,
+ director: String,
  trailer: String
 })
 

@@ -6,11 +6,16 @@
     </button>
 </a>
 
-{{#each allMovies}}
+{{#each allTvShows}}
     <a href="/tv/{{_id}}">
         {{#if picture}}
             <img src={{picture}} height=250 width="auto"/>
         {{/if}}
-    <p>{{name}} {{releaseYear}}</p>
     </a>
 {{/each}}
+
+<a href="/movie/">
+    <button>
+        View Movies
+    </button>
+</a>

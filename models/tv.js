@@ -3,8 +3,10 @@ const mongoose = require('./connection.js')
 const TvSchema = new mongoose.Schema({
  name: String,
  releaseYear: Number,
- picture: String,
- directorId: mongoose.ObjectId
+ seasons: Number,
+ network: String,
+ picture: String
+ 
 })
 
 const TvCollection = mongoose.model('Tv', TvSchema)
@@ -12,10 +14,6 @@ const TvCollection = mongoose.model('Tv', TvSchema)
 //getAll
 const getAllTvShows = () => {
     return TvCollection.find({})
-}
-// get all tvs By Directory Id
-const getAllTvShowsByDirectorId = (directorId) => {
-    return TvCollection.find({directorId: directorId})
 }
 //getOne
 const getOneTvShow = (id) => {
@@ -36,7 +34,6 @@ const deleteTvShow = (id) => {
 
 module.exports = {
     getAllTvShows,
-    getAllTvShowsByDirectorId,
     getOneTvShow,
     createTvShow,
     updateTvShow,
