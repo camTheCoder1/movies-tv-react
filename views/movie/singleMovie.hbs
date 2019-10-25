@@ -10,17 +10,17 @@
 </p>
 
 <a href="/movie/edit/{{_id}}">
-    <button>
+    <button id="editMovie">
     Edit Movie
     </button>
 </a>
 
 <form action="/movie/{{_id}}?_method=DELETE" method="POST">
-    <input type="submit" value="Delete Movie"/>
+    <input class="delete" type="submit" value="Delete Movie"/>
 </form>
 
 <a href="/movie">
-    <button>
+    <button class="back">
     Back
     </button>
 </a>
