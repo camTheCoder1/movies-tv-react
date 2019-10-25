@@ -1,4 +1,5 @@
-const renderMovieList = (MovieList) => {
+
+const renderMovieList = (movieList) => {
     const movieListEl = document.getElementById('movie-list')
     // clear previous render
     movieListEl.innerHTML = ''
