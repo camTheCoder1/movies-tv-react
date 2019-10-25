@@ -1,39 +1,13 @@
-# mehn-template-project
-
-# Setup A New Project From This Template
-
-If you are starting a new project do the following:
-
-1. copy/download this directory to where you new project is located and rename
-   it to the name of your project.
-1. change your directory (`cd`) into the copied project template
-1. `npm install`
-1. `node ./server.js`
-1. In a new terminal run `curl localhost:3000/helloworld`. You should see
-   `hello world!` as the output. From there your server template works!
-1. see the `controllers`, `models`, and `views` directories' `readme.md` files
-
-# Setup A New Project Without This Template
-
-If you want to start a project without using this template directory do the
-following:
-
-
-1. `mkdir <project-name>`
-1. `cd <project-name>`
-1. `echo "# <project-name>" > readme.md`
-1. `git init`
-1. `git add readme.md `
-1. `git commit -m "init repo with readme.md"`
-1. `npm init`
-1. `npm install express hbs method-override`
-1. `mkdir models views controllers`
-1. `touch ./server.js`
-
-# Testing Your Api
-
-Run
-    ./testWebAPI -h
-for instructions on how to test your web API. In short this is a BASH script
-wrapper around the `curl` command which is used for making http requests.
 # SEI24-PROJECT2
+
+# Pre-Movie and TV Show APP
+
+## Heroku Link:
+
+## Technologies Used: 
+   Javascript, Css. Built with NodeJs and express, Uilitizing Handlebars for the View and MongoDb for the Database
+   
+  This is a full stack application that will allow the user search for movies and tv shows. I chose to create this app because in the future I would like to turn it into a full movie and tv show APK. The goal of this app, was to allow users to search for a movie of their choice, and preview it. Also lookup information about their favorite television shows. 
+
+## WireFrame and ERD Image
+![erd](screenshots/project2-erd.jpeg)
