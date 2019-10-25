@@ -4,8 +4,9 @@ body{
 }
 
 #movie-list-search-bar{
-display: flex;
-justify-content: flex-end;
+float:right;
+background-color:white;
+color:grey;
 }
 
 button{
